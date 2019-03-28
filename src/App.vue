@@ -1,24 +1,17 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <!-- <HelloWorld msg="Welcome to Your Vue.js App"/> -->
-
-    <div class="sidebar">
-        <router-link :to="{path:'foo'}">foo</router-link>
-        |
-        <router-link :to="{path:'bar'}">bar</router-link>
+    <div class="center">
+        <img alt="Vue logo" src="./assets/logo.png">
     </div>
     <router-view></router-view>
   </div>
 </template>
 
 <script>
-// import HelloWorld from './components/HelloWorld.vue'
 
 export default {
   name: 'app',
   components: {
-    // HelloWorld
   }
 }
 </script>
@@ -28,8 +21,10 @@ export default {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+}
+.center{
+    text-align: center;
 }
 </style>
