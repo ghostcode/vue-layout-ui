@@ -1,17 +1,14 @@
 <template>
-    <div class="layout">
-      <div class="side">有侧边栏</div>
+    <div class="">
+      <div>这里没有侧边栏</div>
       <div class="com-main">
         <slot></slot>
       </div>
     </div>
 </template>
 <script>
-
 export default {
-    name: 'layout',
-    components:{
-    },
+    name: 'no-side-layout',
     data() {
         return {
 
@@ -20,4 +17,5 @@ export default {
 }
 </script>
 <style lang="less" scoped>
+
 </style>

@@ -5,7 +5,8 @@
     </div>
 
     <router-link :to="{path:'login'}" class="nav">login</router-link>
-    <router-link :to="{path:'bar'}" class="nav">layout</router-link>
+    <router-link :to="{path:'bar'}" class="nav">bar</router-link>
+    <router-link :to="{path:'foo'}" class="nav">foo</router-link>
 
     <router-view></router-view>
   </div>
