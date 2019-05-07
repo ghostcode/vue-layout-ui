@@ -2,8 +2,9 @@ import Vue from 'vue'
 import App from './App.vue'
 import VueRouter from 'vue-router'
 import Layout from './components/layout.vue'
-import Foo from './components/foo.vue'
-import Bar from './components/bar.vue'
+import Foo from './views/foo.vue'
+import Bar from './views/bar.vue'
+import Login from './views/login.vue'
 
 
 Vue.config.productionTip = false
@@ -11,6 +12,10 @@ Vue.config.productionTip = false
 Vue.use(VueRouter)
 
 const routes = [
+    {
+      path:'/login',
+      component:Login,
+    },
     {
         path:'/',
         component:Layout,
@@ -28,7 +33,8 @@ const routes = [
 ]
 
 const router = new VueRouter({
-    routes
+  linkExactActiveClass:'active-nav',
+  routes
 })
 
 new Vue({
