@@ -15,7 +15,8 @@
     <router-link :to="{path:'login'}" class="nav">login</router-link>
     <router-link :to="{path:'bar'}" class="nav">bar</router-link>
     <router-link :to="{path:'foo'}" class="nav">foo</router-link>
-
+    <router-link :to="{path:'fnn'}" class="nav">fnn</router-link>
+    
     <router-view></router-view>
   </div>
 </template>

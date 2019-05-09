@@ -2,6 +2,7 @@ import Vue from 'vue'
 import App from './App.vue'
 import VueRouter from 'vue-router'
 import Foo from './views/foo.vue'
+import Fnn from './views/fnn.vue'
 import Bar from './views/bar.vue'
 import Login from './views/login.vue'
 
@@ -18,6 +19,10 @@ const routes = [
     {
       path:'/foo',
       component:Foo
+    },
+    {
+      path:'/fnn',
+      component:Fnn
     },
     {
       path:'/bar',
