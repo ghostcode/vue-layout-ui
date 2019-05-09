@@ -8,11 +8,21 @@
 </template>
 <script>
 
+function getTime(){
+  let time = localStorage.getItem('time')
+  if(!time){
+    time = Date.now()
+    localStorage.setItem('time',time)
+  }
+  return time
+}
+
 export default {
     name: 'layout',
     data(){
       return {
         time:Date.now()
+        // time:getTime()
       }
     },
     components:{
