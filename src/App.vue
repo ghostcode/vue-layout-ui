@@ -1,6 +1,7 @@
 <template>
   <div id="app">
     <div class="center">
+      显隐控制布局<br>
         <img alt="Vue logo" src="./assets/logo.png">
     </div>
 
@@ -18,15 +19,12 @@ export default {
   name: 'app',
   data(){
     return {
-      currentTab:'hello'
     }
   },
   components: {
   },
   methods: {
-    changeComponent(){
-      this.currentTab = this.currentTab == 'hello' ? 'world' : 'hello'
-    }
+
   },
 }
 </script>

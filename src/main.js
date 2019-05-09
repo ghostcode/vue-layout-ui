@@ -1,6 +1,8 @@
 import Vue from 'vue'
 import App from './App.vue'
 import VueRouter from 'vue-router'
+
+import Layout from './components/layout.vue'
 import Foo from './views/foo.vue'
 import Bar from './views/bar.vue'
 import Login from './views/login.vue'
@@ -16,13 +18,23 @@ const routes = [
       component:Login,
     },
     {
-      path:'/foo',
-      component:Foo
+      path:'/',
+      component:Layout,
+      children:[
+        {
+          path:'/foo',
+          component:Foo
+        },
+        {
+          path:'/bar',
+          component:Bar,
+          meta:{
+            hideSide:true
+          }
+        }
+      ]
     },
-    {
-      path:'/bar',
-      component:Bar
-    }
+   
 ]
 
 const router = new VueRouter({
