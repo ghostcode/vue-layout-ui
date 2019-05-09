@@ -2,6 +2,10 @@
   <div id="app">
     <div class="center">
       显隐控制布局<br>
+      <pre>
+        优点：快速，简单
+        缺点：布局复杂、相差较大时，需要控制显示隐藏的地方会很多，维护性降低
+      </pre>
         <img alt="Vue logo" src="./assets/logo.png">
     </div>
 

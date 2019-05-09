@@ -2,11 +2,6 @@
     <div class="layout">
       <div class="side" v-if="!$route.meta.hideSide">
       有侧边栏 {{time}}
-
-      <pre>
-        优点：快速，简单
-        缺点：布局复杂、相差较大时，需要控制显示隐藏的地方会很多，维护性降低
-      </pre>
       </div>
       <div class="com-main">
         <router-view></router-view>
