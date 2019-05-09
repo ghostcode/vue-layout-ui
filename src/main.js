@@ -3,8 +3,8 @@ import App from './App.vue'
 import VueRouter from 'vue-router'
 import Foo from './views/foo.vue'
 import Bar from './views/bar.vue'
+import Fnn from './views/fnn.vue'
 import Login from './views/login.vue'
-
 
 Vue.config.productionTip = false
 
@@ -17,11 +17,24 @@ const routes = [
     },
     {
       path:'/foo',
-      component:Foo
+      component:Foo,
+      meta:{
+        layout:'layout'
+      }
     },
     {
       path:'/bar',
-      component:Bar
+      component:Bar,
+      meta:{
+        layout:'nosidelayout'
+      }
+    },
+    {
+      path:'/fnn',
+      component:Fnn,
+      meta:{
+        layout:'layout'
+      }
     }
 ]
 

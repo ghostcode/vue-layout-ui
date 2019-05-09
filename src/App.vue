@@ -1,13 +1,10 @@
 <template>
   <div id="app">
     <div class="center">
-      slot 来实现布局<br>
-
+      component + slot 来实现布局<br>
       <pre>
         优点：简单、清晰，适合多种复杂布局
-        缺点：外层布局每次都会重新渲染且子组件也会重新渲染，对性能会有影响。（切换bar/foo，查看时间戳每次都会变）
-        由于每次都重新渲染，若有网络请求，比如用户信息等公共信息，
-        每次都会调用接口（当然本地存储可以解决,查看源码内的layout.vue里time换为getTime()获取）
+        缺点：没有明显的缺点
       </pre>
         <img alt="Vue logo" src="./assets/logo.png">
     </div>
@@ -15,31 +12,49 @@
     <router-link :to="{path:'login'}" class="nav">login</router-link>
     <router-link :to="{path:'bar'}" class="nav">bar</router-link>
     <router-link :to="{path:'foo'}" class="nav">foo</router-link>
+    <router-link :to="{path:'fnn'}" class="nav">fnn</router-link>
 
-    <router-view></router-view>
+    <component :is="layout">
+      <router-view></router-view>
+    </component>
   </div>
 </template>
 
 <script>
 
+import layout from './components/layout'
+import nosidelayout from './components/no-side-layout'
+
 export default {
   name: 'app',
   data(){
     return {
-      currentTab:'hello'
+    }
+  },
+  computed: {
+    layout(){
+      return this.$route.meta.layout || 'div'
     }
   },
   components: {
+    layout,
+    nosidelayout
   },
+  mounted() {
+
+  },  
   methods: {
-    changeComponent(){
-      this.currentTab = this.currentTab == 'hello' ? 'world' : 'hello'
-    }
   },
 }
 </script>
 
 <style>
+html{
+ 
+}
+body{
+
+}
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
