@@ -2,20 +2,20 @@
     <div class="layout">
       <div class="side">有侧边栏 {{time}}</div>
       <div class="com-main">
-        <slot></slot>
+        <router-view></router-view>
       </div>
     </div>
 </template>
 <script>
 
-function getTime(){
-  let time = localStorage.getItem('time')
-  if(!time){
-    time = Date.now()
-    localStorage.setItem('time',time)
-  }
-  return time
-}
+// function getTime(){
+//   let time = localStorage.getItem('time')
+//   if(!time){
+//     time = Date.now()
+//     localStorage.setItem('time',time)
+//   }
+//   return time
+// }
 
 export default {
     name: 'layout',

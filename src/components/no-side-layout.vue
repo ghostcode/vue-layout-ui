@@ -1,7 +1,7 @@
 <template>
     <div class="no-side-layout">
       <div class="com-main">
-        <slot></slot>
+        <router-view></router-view>
       </div>
     </div>
 </template>

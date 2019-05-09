@@ -1,10 +1,10 @@
 <template>
   <div id="app">
     <div class="center">
-      component + slot 来实现布局<br>
+      router-view 来实现布局<br>
       <pre>
         优点：简单、清晰，适合多种复杂布局
-        缺点：没有明显的缺点
+        缺点：最优解
       </pre>
         <img alt="Vue logo" src="./assets/logo.png">
     </div>
@@ -13,17 +13,11 @@
     <router-link :to="{path:'bar'}" class="nav">bar</router-link>
     <router-link :to="{path:'foo'}" class="nav">foo</router-link>
     <router-link :to="{path:'fnn'}" class="nav">fnn</router-link>
-
-    <component :is="layout">
-      <router-view></router-view>
-    </component>
+    <router-view></router-view>
   </div>
 </template>
 
 <script>
-
-import layout from './components/layout'
-import nosidelayout from './components/no-side-layout'
 
 export default {
   name: 'app',
@@ -32,16 +26,10 @@ export default {
     }
   },
   computed: {
-    layout(){
-      return this.$route.meta.layout || 'div'
-    }
   },
   components: {
-    layout,
-    nosidelayout
   },
   mounted() {
-
   },  
   methods: {
   },

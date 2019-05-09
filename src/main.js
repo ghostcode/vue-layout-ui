@@ -6,6 +6,9 @@ import Bar from './views/bar.vue'
 import Fnn from './views/fnn.vue'
 import Login from './views/login.vue'
 
+import Layout from './components/layout.vue'
+import NoSideLayout from './components/no-side-layout.vue'
+
 Vue.config.productionTip = false
 
 Vue.use(VueRouter)
@@ -16,25 +19,28 @@ const routes = [
       component:Login,
     },
     {
-      path:'/foo',
-      component:Foo,
-      meta:{
-        layout:'layout'
-      }
+      path:'/',
+      component:Layout,
+      children:[
+        {
+          path:'/foo',
+          component:Foo,
+        },
+        {
+          path:'/fnn',
+          component:Fnn,
+        }
+      ]
     },
     {
-      path:'/bar',
-      component:Bar,
-      meta:{
-        layout:'nosidelayout'
-      }
-    },
-    {
-      path:'/fnn',
-      component:Fnn,
-      meta:{
-        layout:'layout'
-      }
+      path:'/',
+      component:NoSideLayout,
+      children:[
+        {
+          path:'/bar',
+          component:Bar,
+        },
+      ]
     }
 ]
 
