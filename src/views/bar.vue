@@ -1,9 +1,7 @@
 <template>
-  <NoSideLayout>
     <div class="page-bar">
         bar(无侧边栏)
     </div>
-  </NoSideLayout>
 </template>
 <script>
 export default {

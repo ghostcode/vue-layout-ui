@@ -1,9 +1,7 @@
 <template>
-  <Layout>
     <div class="page-foo">
         foo
     </div>
-  </Layout>
 </template>
 <script>
 
