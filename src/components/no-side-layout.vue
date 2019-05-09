@@ -1,6 +1,5 @@
 <template>
-    <div class="">
-      <div>这里没有侧边栏</div>
+    <div class="no-side-layout">
       <div class="com-main">
         <slot></slot>
       </div>
@@ -17,5 +16,10 @@ export default {
 }
 </script>
 <style lang="less" scoped>
-
+.no-side-layout{
+  border:1px solid #ddd;
+  .com-main{
+    height:300px;
+  }
+}
 </style>
